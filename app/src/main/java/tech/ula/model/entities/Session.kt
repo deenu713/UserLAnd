@@ -73,9 +73,9 @@ data class Session(
     var filesystemId: Long,
     var filesystemName: String = "",
     var active: Boolean = false,
-    var username: String = "",
-    var password: String = "",
-    var vncPassword: String = "",
+    var username: String = "android-user",
+    var password: String = "12345678",
+    var vncPassword: String = "12345678",
     var serviceType: ServiceType = ServiceType.Unselected,
     var port: Long = 2022, // TODO This can be removed. Any eventual port managing should be done at a high     er abstraction.
     var pid: Long = 0,
