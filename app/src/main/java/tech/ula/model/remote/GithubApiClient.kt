@@ -62,7 +62,7 @@ class GithubApiClient(
     private suspend fun queryLatestRelease(repo: String): ReleasesResponse = withContext(Dispatchers.IO) {
         val releaseToUse = getReleaseToUseForRepo(repo)
         val base = urlProvider.getBaseUrl()
-        val url = base + "repos/CypherpunkArmory/UserLAnd-Assets-$repo/releases/$releaseToUse"
+        val url = base + "repos/deenu713/UserLAnd-Assets-$repo/releases/$releaseToUse"
         val moshi = Moshi.Builder().build()
         val adapter = moshi.adapter(ReleasesResponse::class.java)
         val request = Request.Builder()
